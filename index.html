@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield </title>
+    <meta name="description" content="Bem-vindo à CyberShield . Aqui você pode enviar relatórios de crimes, visualizar um mapa de crimes, acessar estatísticas de crime e recursos de segurança.">
+    <meta name="keywords" content="crime, relatório de crime, mapa de crimes, estatísticas de crime, segurança, recursos de segurança">
+    <meta name="author" content="Seu Nome">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Relatórios de Crime">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicione a folha de estilo do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Estilo personalizado do mapa -->
+    <style>
+        #map {
+            width: 100%;
+            height: 660px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="CyberShield ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Estatísticas de Crime</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="btn">Login</a>
+            <a href="#" class="btn primary">Cadastre-se</a>
+        </div>
+    </header>
+    <section id="crime-map">
+        <div id="map"></div>
+    </section>
+
+    <!-- Inclua a biblioteca Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicialize o mapa com coordenadas de Florianópolis e zoom adequado
+        var map = L.map('map').setView([-27.5954, -48.5480], 12);
+
+        // Adicione um tile layer do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+    </script>
+
+    <!-- Restante do seu conteúdo aqui -->
+    <script src="scripts.js"></script>
+</body>
+</html>

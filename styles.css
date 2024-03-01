@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Cor de fundo do corpo */
+}
+
+header {
+    background-color: #FFFFFF; /* Cor de fundo do header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+header:hover {
+    background-color: #f9f9f9; /* Cor de fundo do header ao passar o mouse */
+}
+
+.logo {
+    flex: 1; /* Permite que o logo ocupe o espaço restante */
+}
+
+.logo img {
+    max-width: 150px;
+    transition: transform 0.3s ease; /* Transição suave da escala */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Transição suave da escala */
+}
+
+nav ul li:hover {
+    transform: scale(1.1); /* Aumenta a escala ao passar o mouse */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.user-actions {
+    margin-left: auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid #FF5733; /* Cor da borda */
+    border-radius: 5px;
+    color: #FF5733; /* Cor do texto */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.btn.primary {
+    background-color: #FF5733; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    border-color: #FF5733; /* Cor da borda */
+}
+
+.btn:hover {
+    background-color: #FF5733; /* Cor de fundo do hover */
+    color: #FFFFFF; /* Cor do texto do hover */
+}
+
+.menu-icon {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.menu-icon svg {
+    width: 24px;
+    height: 24px;
+}
