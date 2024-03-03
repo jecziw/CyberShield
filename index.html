@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberShield </title>
-    <meta name="description" content="Bem-vindo à CyberShield . Aqui você pode enviar relatórios de crimes, visualizar um mapa de crimes, acessar estatísticas de crime e recursos de segurança.">
+    <title>CyberShield</title>
+    <meta name="description" content="Bem-vindo à Página de Relatórios de Crime. Aqui você pode enviar relatórios de crimes, visualizar um mapa de crimes, acessar estatísticas de crime e recursos de segurança.">
     <meta name="keywords" content="crime, relatório de crime, mapa de crimes, estatísticas de crime, segurança, recursos de segurança">
     <meta name="author" content="Seu Nome">
     <meta name="robots" content="index, follow">
@@ -13,8 +14,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Relatórios de Crime">
+    <!-- Ícones -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- Folha de estilo -->
     <link rel="stylesheet" href="styles.css">
     <!-- Adicione a folha de estilo do Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -27,26 +30,64 @@
     </style>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="CyberShield ">
+            <img src="logo.png" alt="Logo da Sua Loja">
         </div>
+        <!-- Menu de navegação -->
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Estatísticas de Crime</a></li>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="about-link">Sobre Nós</a></li>
+                <li><a href="#" id="contact-link">Contato</a></li>
+                <li><a href="#" id="stats-link">Estatísticas de Crime</a></li>
             </ul>
         </nav>
+        <!-- Ações do usuário -->
         <div class="user-actions">
-            <a href="#" class="btn">Login</a>
-            <a href="#" class="btn primary">Cadastre-se</a>
+            <a href="#" class="btn" id="login-link">Login</a>
+            <a href="#" class="btn primary" id="signup-link">Cadastre-se</a>
         </div>
     </header>
-    <section id="crime-map">
-        <div id="map"></div>
-    </section>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção do mapa de crime -->
+        <section id="crime-map">
+            <div id="map"></div>
+        </section>
+
+        <!-- Exemplo de formulário de login e cadastro -->
+        <section id="login-signup">
+            <h2>Login ou Cadastro</h2>
+            <form id="login-form" action="#" method="POST">
+                <fieldset>
+                    <legend>Login</legend>
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Entrar</button>
+                </fieldset>
+            </form>
+            <form id="signup-form" action="#" method="POST">
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <label for="new-username">Novo Nome de Usuário:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                    <label for="new-password">Nova Senha:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                    <button type="submit">Cadastrar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 CyberShield. Todos os direitos reservados.</p>
+    </footer>
 
     <!-- Inclua a biblioteca Leaflet -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
