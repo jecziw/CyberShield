@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    transition: background-color 0.3s ease; /* TransiÃ§Ã£o suave da cor de fundo */
 }
 
 header:hover {
@@ -20,12 +20,12 @@ header:hover {
 }
 
 .logo {
-    flex: 1; /* Permite que o logo ocupe o espaço restante */
+    flex: 1; /* Permite que o logo ocupe o espaÃ§o restante */
 }
 
 .logo img {
     max-width: 150px;
-    transition: transform 0.3s ease; /* Transição suave da escala */
+    transition: transform 0.3s ease; /* TransiÃ§Ã£o suave da escala */
 }
 
 .logo img:hover {
@@ -41,7 +41,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-right: 20px;
-    transition: transform 0.3s ease; /* Transição suave da escala */
+    transition: transform 0.3s ease; /* TransiÃ§Ã£o suave da escala */
 }
 
 nav ul li:hover {
@@ -64,7 +64,7 @@ nav ul li a {
     border-radius: 5px;
     color: #FF5733; /* Cor do texto */
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    transition: background-color 0.3s ease, color 0.3s ease; /* TransiÃ§Ãµes suaves */
 }
 
 .btn.primary {
@@ -87,4 +87,54 @@ nav ul li a {
 .menu-icon svg {
     width: 24px;
     height: 24px;
+}
+
+/* Cores para cada grupo de incidentes */
+.incidente-Violento::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff0000; /* Vermelho para incidentes violentos */
+    margin-right: 10px; /* EspaÃ§amento entre o cÃ­rculo e o texto */
+    transition: transform 0.3s ease; /* Efeito de transiÃ§Ã£o suave */
+}
+
+.incidente-PatrimÃ´nios::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff8c00; /* Laranja para incidentes de patrimÃ´nio e roubo */
+    margin-right: 10px; /* EspaÃ§amento entre o cÃ­rculo e o texto */
+    transition: transform 0.3s ease; /* Efeito de transiÃ§Ã£o suave */
+}
+
+.incidente-PerturbaÃ§Ã£o::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0000ff; /* Azul para incidentes de perturbaÃ§Ã£o */
+    margin-right: 10px; /* EspaÃ§amento entre o cÃ­rculo e o texto */
+    transition: transform 0.3s ease; /* Efeito de transiÃ§Ã£o suave */
+}
+
+.incidente-emergencia::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #008000; /* Verde para incidentes de emergÃªncia */
+    margin-right: 10px; /* EspaÃ§amento entre o cÃ­rculo e o texto */
+    transition: transform 0.3s ease; /* Efeito de transiÃ§Ã£o suave */
+}
+
+/* Efeito de escala ao passar o mouse */
+.agency-item:hover::before {
+    transform: scale(1.2); /* Aumenta o tamanho do cÃ­rculo */
 }
